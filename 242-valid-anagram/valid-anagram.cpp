@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
+        /* o(n) solution using hasmap:
         if(s.length()==t.length()){
             unordered_map<char,int>s_map;
             for(int i=0;i<s.length();i++){
@@ -23,5 +24,17 @@ public:
         }else{
             return false;
         }
+    }
+    */
+    //Most optimal solution:
+        if(s.length()!=t.length()) return false;
+        int arr[26]={0};
+        for(char c: s){
+            arr[c-'a']++;
+        }
+        for(char c: t){
+            if(--arr[c-'a']<0) return false;
+        }
+        return true;
     }
 };
