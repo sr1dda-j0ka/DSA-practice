@@ -1,6 +1,6 @@
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        //Use a HashSet to store the elements
+        //Use a HashSet to store the elements - O(n) time complexity
         HashSet<Integer> set=new HashSet<>();
         for(int i=0;i<nums.length;i++){
             if(set.contains(nums[i])){ //check if the element already exists in the hashset 
