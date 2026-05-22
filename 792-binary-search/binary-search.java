@@ -1,4 +1,5 @@
 class Solution {
+    //Straight Forward Binary Search Algorithm
     public int search(int[] nums, int target) {
         int left=0,right=nums.length-1;
         
