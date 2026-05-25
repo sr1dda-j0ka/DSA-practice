@@ -1,4 +1,5 @@
 class Solution {
+    //No space optimisation, Create new Array and alternatively place positive and negative elements
     public int[] rearrangeArray(int[] nums) {
         int[] result=new int[nums.length];
         int pos=0,neg=1;
