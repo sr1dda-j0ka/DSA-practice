@@ -1,5 +1,5 @@
 class Solution {
-    //Sliding Window Pattern
+    //Sliding Window Pattern, Time complexity: O(n)
 
     public int lengthOfLongestSubstring(String s) {
 
