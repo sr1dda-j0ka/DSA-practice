@@ -9,15 +9,18 @@
  * }
  */
 class Solution {
+    //Time Complexity: O(n) Space Complexity: O(1)
+    //Approach: traverse the list and save the next element before changing next pointer to previous
+    //continue iteration
     public ListNode reverseList(ListNode head) {
-        ListNode curr=head;
-        ListNode prev=null;
+        ListNode curr=head; //current element
+        ListNode prev=null; //previous element
         while(curr!=null){
-            ListNode next=curr.next;
-            curr.next=prev;
+            ListNode next=curr.next; //next element is stored
+            curr.next=prev; //replace current with previous element
             prev=curr;
-            curr=next;
+            curr=next; //move to next element 
         }
-        return prev;
+        return prev; //return head of reversed list
     }
 }
