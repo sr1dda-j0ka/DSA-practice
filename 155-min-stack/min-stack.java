@@ -1,5 +1,7 @@
 class MinStack {
-    ArrayList<Integer> stack;
+    //Approach is to create a new stack called minstack that track the minimum elements
+    //Pay attention to push and pop functions
+    ArrayList<Integer> stack; 
     ArrayList<Integer> minstack;
     public MinStack() {
         stack=new ArrayList<>();
