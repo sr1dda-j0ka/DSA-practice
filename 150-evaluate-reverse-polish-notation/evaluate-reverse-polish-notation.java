@@ -1,4 +1,6 @@
 class Solution {
+    //Implement postfix expression solving using stacks
+    //Time complexity: O(n)
     public int evalRPN(String[] tokens) {
         Deque<Integer> stack=new ArrayDeque<>();
         int res;
