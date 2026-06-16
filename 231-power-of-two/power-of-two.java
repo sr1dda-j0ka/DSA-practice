@@ -1,15 +1,6 @@
 class Solution {
     public boolean isPowerOfTwo(int n) {
-        if(n==1){
-            return true;
-        }
-        double product=n;
-        while(product>=1){
-            product/=2;
-            if(product==1){
-                return true;
-            }
-        }
-        return false;
+        //Loops can be used but optimal approach is bit manipulation
+        return n>0 && (n&(n-1))==0;
     }
 }
