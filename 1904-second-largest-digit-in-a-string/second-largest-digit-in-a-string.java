@@ -1,5 +1,7 @@
 class Solution {
     public int secondHighest(String s) {
+        //Traverse the string and store second highest and highest values
+        //Time Complexity: O(1) and Space Complexity: O(1)
         int highest=-1;
         int secondHighest=-1;
         for(int i=0;i<s.length();i++){
