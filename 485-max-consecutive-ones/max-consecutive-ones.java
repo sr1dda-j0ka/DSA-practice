@@ -1,4 +1,6 @@
 class Solution {
+    //Time Complexity: O(n)
+    //Iterate through the elements and track maximum number each time
     public int findMaxConsecutiveOnes(int[] nums) {
         int maxCount=0;
         int count=0;
