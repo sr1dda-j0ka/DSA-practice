@@ -1,4 +1,5 @@
 class Solution {
+    //Standard Merge Sort, Time Complexity: O(nlogn) Space Complexity: O(n)
     public int[] sortArray(int[] nums) {
         if(nums.length==1) return nums;
         int mid=nums.length/2;
