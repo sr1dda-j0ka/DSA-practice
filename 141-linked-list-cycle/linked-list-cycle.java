@@ -10,6 +10,11 @@
  * }
  */
 public class Solution {
+    //Floyd's algorithm: 
+    //the slow pointer moves one step ahead
+    //the fast pointer moves two steps ahead
+    //if there is a cycle, they both will meet else they won't 
+    //O(n) time and O(1) space
     public boolean hasCycle(ListNode head) {
         ListNode slow=head;
         ListNode fast=head;
