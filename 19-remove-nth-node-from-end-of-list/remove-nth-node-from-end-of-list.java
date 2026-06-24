@@ -9,25 +9,22 @@
  * }
  */
 class Solution {
+    //Point fast and slow to a dummy node before head
+    //Move fast t times
+    //Move slow and fast together till fast reaches end of the list
+    //Slow is right before the node to be deleted, delete the next node and return dummy.next
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if(head==null){
-            return null;
+        ListNode dummy=new ListNode(0,head);
+        ListNode slow=dummy;
+        ListNode fast=dummy;
+        for(int i=0;i<=n;i++){
+            fast=fast.next;
         }
-        int size=0;
-        ListNode temp=head;
-        while(temp!=null){
-            size++;
-            temp=temp.next;
+        while(fast!=null){
+            slow=slow.next;
+            fast=fast.next;
         }
-        int indx=size-n;
-        if(indx==0){
-            return head.next;
-        }
-        ListNode pointer=head;
-        for(int i=0;i<indx-1;i++){
-            pointer=pointer.next;
-        }
-        pointer.next=pointer.next.next;
-        return head;
+        slow.next=slow.next.next;
+        return dummy.next;
     }
 }
