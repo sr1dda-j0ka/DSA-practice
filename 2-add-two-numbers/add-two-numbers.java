@@ -10,6 +10,9 @@
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        //Use pointers and add the numbers one by one 
+        //Carefully handle the carry
+        //Time Complexity: O(n) Space complexity: O(1)
         int sum=0,carry=0;
         ListNode dummy=new ListNode(0,null);
         ListNode curr=dummy;
