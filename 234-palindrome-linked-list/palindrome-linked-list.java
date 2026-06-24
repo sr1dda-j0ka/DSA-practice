@@ -9,6 +9,9 @@
  * }
  */
 class Solution {
+    //Find the middle element of the list
+    //reverse the second half of the list
+    //compare the reversed second half and first half of the list
     public boolean isPalindrome(ListNode head) {
         ListNode fast=head;
         ListNode slow=head;
