@@ -10,6 +10,7 @@
  * }
  */
 public class Solution {
+    //Have the pointers visit every node in both the list till both of them become equal
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode p1=headA;
         ListNode p2=headB;
