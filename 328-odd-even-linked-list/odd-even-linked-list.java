@@ -9,18 +9,19 @@
  * }
  */
 class Solution {
+    //Time Complexity: O(n) Space complexity: O(1)
     public ListNode oddEvenList(ListNode head) {
-        if(head==null||head.next==null){
-            return head;
+        if(head==null||head.next==null){ 
+            return head; //cases where head or head.next is null 
         }
-        ListNode oddPointer=head;
-        ListNode evenPointer=head.next;
-        ListNode evenHead=head.next;
+        ListNode oddPointer=head; //initialise oddPointer
+        ListNode evenPointer=head.next; //initialise evenPointer
+        ListNode evenHead=head.next; //save head of even list 
         while(evenPointer!=null && evenPointer.next!=null){
-            oddPointer.next=oddPointer.next.next;
-            oddPointer=oddPointer.next;
-            evenPointer.next=oddPointer.next;
-            evenPointer=evenPointer.next;
+            oddPointer.next=oddPointer.next.next; //connect odd node to the next odd node
+            oddPointer=oddPointer.next;//oddPointer is moved to the next odd node
+            evenPointer.next=oddPointer.next;//connect even pointer to the next even node
+            evenPointer=evenPointer.next; //move even pointer
         }
         oddPointer.next=evenHead;
         return head;
