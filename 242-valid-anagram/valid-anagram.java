@@ -1,5 +1,8 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
+        //Time Complexity: O(n)
+        //Form two frequency arrays for both the strings
+        //Anagrams if the frequency arrays match
         int[] freq1=new int[26];
         int[] freq2=new int[26];
         if(s.length()!=t.length()) return false;
