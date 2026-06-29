@@ -1,5 +1,8 @@
 class Solution {
     public String longestCommonPrefix(String[] strs) {
+        //Sort the array in lexicographical order
+        //then compare the first and last string till one of them ends
+        //keep track of result and return it in the end
         String result="";
         Arrays.sort(strs);
         String first=strs[0],last=strs[strs.length-1];
