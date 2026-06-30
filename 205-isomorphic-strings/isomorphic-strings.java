@@ -1,5 +1,7 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
+        //Use two frequency maps and store the last occuring index
+        //Time Complexity: O(n) Space: O(n)
         int[] freq1=new int[128];
         int[] freq2=new int[128];
         if(s.length()!=t.length()) return false;
