@@ -10,6 +10,9 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
+        //Use three pointers prev, curr
+        //everytime, temp stores the next value, curr is pointed towards prev and prev becomes curr
+        //curr moves to next value stored in temp
         if(head==null) return head;
         ListNode prev=null;
         ListNode curr=head;
